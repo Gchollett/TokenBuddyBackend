@@ -1,0 +1,36 @@
+{
+  "name": "tokenbuddybackend",
+  "version": "0.1.0",
+  "description": "The backend service for Token Buddy aplication",
+  "main": "server.ts",
+  "scripts": {
+    "test": "test",
+    "start": "node server",
+    "dev": "nodemon server",
+    "gen": "prisma generate && prisma db push",
+    "updatedb": "npx ts-node ./utilities/updateDatabase.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gchollett/TokenBuddyBackend.git"
+  },
+  "author": "Garrett Chollett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gchollett/TokenBuddyBackend/issues"
+  },
+  "homepage": "https://github.com/Gchollett/TokenBuddyBackend#readme",
+  "dependencies": {
+    "@prisma/client": "^5.3.1",
+    "bson": "^6.1.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.2",
+    "cors": "^2.8.5",
+    "nodemon": "^3.0.1",
+    "prisma": "^5.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
