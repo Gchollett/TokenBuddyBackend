@@ -1,12 +1,12 @@
-const gc = require('./utilities/get-cards.ts');
-const express = require('express');
+import getCards from './utilities/get-cards.js';
+import express from 'express';
 const app = express();
-const cors = require('cors');
+import cors from 'cors'
 
 var cards = {}
 
 const loadCards = async () => {
-  cards = await gc.getCards()
+  cards = await getCards()
 }
 
 app.use(cors());
@@ -15,7 +15,7 @@ app.get("/cards", async (req,res) => {
   res.json({"cards":cards})
 })
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   loadCards();
   console.log("Backend Server Started!");
 });

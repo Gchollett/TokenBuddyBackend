@@ -2,10 +2,11 @@
   "name": "tokenbuddybackend",
   "version": "0.1.0",
   "description": "The backend service for Token Buddy aplication",
-  "main": "server.ts",
+  "main": "server.js",
+  "type":"module",
   "scripts": {
     "test": "test",
-    "start": "node server.ts",
+    "start": "node server.js",
     "dev": "nodemon server",
     "gen": "prisma generate && prisma db push",
     "updatedb": "npx ts-node ./utilities/updateDatabase.ts"
