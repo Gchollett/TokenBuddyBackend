@@ -5,7 +5,7 @@
   "main": "server.ts",
   "scripts": {
     "test": "test",
-    "start": "node server",
+    "start": "node server.ts",
     "dev": "nodemon server",
     "gen": "prisma generate && prisma db push",
     "updatedb": "npx ts-node ./utilities/updateDatabase.ts"

@@ -1,4 +1,4 @@
-import getCards from "./utilities/get-cards";
+const gc = require('./utilities/get-cards.ts');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -6,7 +6,7 @@ const cors = require('cors');
 var cards = {}
 
 const loadCards = async () => {
-  cards = await getCards()
+  cards = await gc.getCards()
 }
 
 app.use(cors());
