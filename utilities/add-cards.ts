@@ -13,7 +13,7 @@ type battlefield = card[]
 const addCards = async (cards : battlefield) => {
     cards.forEach(async card => {
         const transaction = await prisma.card.create({data: {...card}})
-        console.log(transaction)
+        // console.log(transaction)
     })
 }
 

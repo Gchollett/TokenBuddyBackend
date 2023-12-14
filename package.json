@@ -9,7 +9,7 @@
     "start": "node server.js",
     "dev": "nodemon server",
     "gen": "prisma generate && prisma db push",
-    "updatedb": "npx ts-node ./utilities/updateDatabase.ts"
+    "updatedb": "npx tsx ./utilities/updateDatabase.ts"
   },
   "repository": {
     "type": "git",

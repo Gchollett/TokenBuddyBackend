@@ -26,6 +26,7 @@ const main = async () => {
   const apiUrl = 'https://api.scryfall.com/cards/search?q=t%3Atoken&unique=cards';
   await clearDatabase();
   await fetchData(apiUrl);
+  console.log('Database Updated');
 }
 
 main();
