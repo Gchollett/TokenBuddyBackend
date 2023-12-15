@@ -10,11 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model card {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
-  power String @default("NaN")
+model Face {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  power     String @default("NaN")
   toughness String @default("NaN")
-  frontImage String @default("None")
-  backImage String @default("None")
+  image     String @default("None")
+  card      Card   @relation(fields: [cardId], references: [id])
+  cardId    String @db.ObjectId
+}
+
+model Card {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  multiFaced Boolean
+  name  String
+  faces Face[]
+  power String?
+  toughness String?
+  image String?
 }
