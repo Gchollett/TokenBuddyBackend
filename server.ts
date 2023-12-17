@@ -12,7 +12,7 @@ const loadCards = async () => {
 app.use(cors());
 
 app.get("/cards", async (req,res) => {
-  res.json({"cards":cards})
+  res.json({"cards": cards})
 })
 
 app.listen(process.env.PORT, () => {

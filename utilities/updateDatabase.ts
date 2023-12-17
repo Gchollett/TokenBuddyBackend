@@ -34,7 +34,6 @@ const fetchData = (page) => {
         return {
           name: card.name,
           multiFaced: false,
-          faces: [],
           power: card.power,
           toughness: card.toughness,
           image: card.image_uris?.border_crop
