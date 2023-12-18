@@ -1,6 +1,6 @@
 {
   "name": "tokenbuddybackend",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The backend service for Token Buddy aplication",
   "main": "server.ts",
   "scripts": {
